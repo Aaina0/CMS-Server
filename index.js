@@ -14,7 +14,8 @@ app.use(express.json());
 
 // CORS configuration
 const corsOptions = {
-  origin: 'http://localhost:5173', // Specify the frontend origin
+  origin: ["https://cms-client-gamma.vercel.app/"], // Specify the frontend origin
+  methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true, // Allow credentials (cookies, authorization headers, etc.)
 };
 
