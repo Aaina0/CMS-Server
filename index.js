@@ -13,13 +13,13 @@ const app = express();
 app.use(express.json());
 
 // CORS configuration
-const corsOptions = {
-  origin: ["https://cms-client-gamma.vercel.app"], // Correct the origin
-  methods: ["GET", "POST", "PUT", "DELETE"],
-  credentials: true, // Allow credentials (cookies, authorization headers, etc.)
-};
-
-app.use(cors(corsOptions));
+app.use(
+  cors({
+    origin: ["https://cms-client-gamma.vercel.app"], // Correct the origin
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true, // Allow credentials (cookies, authorization headers, etc.)
+  })
+);
 
 // Define routes
 app.use("/contactms", Router);
